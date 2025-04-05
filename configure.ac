@@ -137,7 +137,7 @@ if test "$enable_shared" = yes; then
         bsymbolic=no
     fi
     LDFLAGS="$_LDFLAGS"
-    src_core_libffms2_la_LDFLAGS="$src_core_libffms2_la_LDFLAGS -version-info $VERSION_INFO"
+    src_core_libffms2_la_LDFLAGS="$src_core_libffms2_la_LDFLAGS -version-info $VERSION_INFO -municode"
 else
     bsymbolic=no
 fi
@@ -152,6 +152,7 @@ if echo "$host" | $GREP "mingw" >/dev/null 2>&1; then
     LTUNDEF="-no-undefined"
 fi
 AC_SUBST([LTUNDEF])
+AC_SUBST([src_index_ffmsindex_LDFLAGS])
 
 AC_CONFIG_FILES([
 Makefile
