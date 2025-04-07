@@ -137,7 +137,7 @@ if test "$enable_shared" = yes; then
         bsymbolic=no
     fi
     LDFLAGS="$_LDFLAGS"
-    src_core_libffms2_la_LDFLAGS="$src_core_libffms2_la_LDFLAGS -version-info $VERSION_INFO"
+    src_core_libffms2_la_LDFLAGS="$src_core_libffms2_la_LDFLAGS -version-info $VERSION_INFO -municode"
 else
     bsymbolic=no
 fi
